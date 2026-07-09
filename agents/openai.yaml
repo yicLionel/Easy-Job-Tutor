@@ -1,0 +1,7 @@
+interface:
+  display_name: "Easy Job Tutor"
+  short_description: "Optimize job materials and build ATS resumes"
+  default_prompt: "Use $easy-job-tutor to optimize my resume for a target job and optionally build an ATS-friendly PDF resume."
+
+policy:
+  allow_implicit_invocation: true
