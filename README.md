@@ -11,6 +11,12 @@ Easy-Job-Tutor is an open-source Codex Skill for job description analysis, resum
 - [Español](#español)
 - [Deutsch](#deutsch)
 
+## Skill Preview
+
+![Easy-Job-Tutor workflow](assets/readme/skill-workflow.svg)
+
+![ATS-friendly resume PDF preview](assets/readme/resume-pdf-preview.png)
+
 ## English
 
 ### What It Does
