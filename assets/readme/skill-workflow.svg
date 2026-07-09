@@ -1,0 +1,50 @@
+<svg width="1400" height="560" viewBox="0 0 1400 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Easy-Job-Tutor Skill workflow</title>
+  <desc id="desc">A visual workflow from target role and resume input to JD analysis, resume optimization, application materials, PDF resume building, and verification.</desc>
+  <rect width="1400" height="560" rx="34" fill="#F7FAFC"/>
+  <rect x="38" y="38" width="1324" height="484" rx="28" fill="white" stroke="#D9E2EC" stroke-width="2"/>
+  <text x="86" y="112" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#102A43">Easy-Job-Tutor</text>
+  <text x="86" y="154" font-family="Inter, Arial, sans-serif" font-size="22" fill="#486581">JD analysis -> resume optimization -> application materials -> ATS-friendly PDF</text>
+  <g transform="translate(86 220)">
+    <rect width="180" height="116" rx="18" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+    <text x="90" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" fill="#075985">User Goal</text>
+    <text x="90" y="76" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#164E63">Target role</text>
+    <text x="90" y="101" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#164E63">Real resume</text>
+  </g>
+  <path d="M288 278H355" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M355 278L335 264M355 278L335 292" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(378 220)">
+    <rect width="180" height="116" rx="18" fill="#ECFDF5" stroke="#34D399" stroke-width="2"/>
+    <text x="90" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" fill="#047857">JD Analysis</text>
+    <text x="90" y="76" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#065F46">Requirements</text>
+    <text x="90" y="101" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#065F46">Keywords</text>
+  </g>
+  <path d="M580 278H647" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M647 278L627 264M647 278L627 292" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(670 220)">
+    <rect width="196" height="116" rx="18" fill="#EEF2FF" stroke="#818CF8" stroke-width="2"/>
+    <text x="98" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" fill="#4338CA">Resume</text>
+    <text x="98" y="76" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#3730A3">Evidence mapping</text>
+    <text x="98" y="101" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#3730A3">Bullet rewrite</text>
+  </g>
+  <path d="M888 278H955" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M955 278L935 264M955 278L935 292" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(978 220)">
+    <rect width="180" height="116" rx="18" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/>
+    <text x="90" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" fill="#C2410C">PDF Builder</text>
+    <text x="90" y="76" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#9A3412">Style + photo</text>
+    <text x="90" y="101" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#9A3412">Text PDF</text>
+  </g>
+  <path d="M1180 278H1247" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1247 278L1227 264M1247 278L1227 292" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(1270 220)">
+    <rect width="76" height="116" rx="18" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+    <text x="38" y="49" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#334155">Verify</text>
+    <text x="38" y="80" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#475569">ATS</text>
+    <text x="38" y="101" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#475569">Layout</text>
+  </g>
+  <g transform="translate(86 410)">
+    <rect width="1260" height="62" rx="16" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="630" y="39" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1E293B">No fabricated experience -> real evidence only -> clean visual hierarchy -> selectable resume text</text>
+  </g>
+</svg>
