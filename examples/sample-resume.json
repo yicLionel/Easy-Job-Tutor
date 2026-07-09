@@ -1,0 +1,75 @@
+{
+  "header": {
+    "name": "Alex Chen",
+    "email": "alex.chen@email.com",
+    "phone": "+61 400 000 000",
+    "location": "Melbourne, Australia",
+    "linkedin": "linkedin.com/in/alexchen",
+    "github": "github.com/alexchen"
+  },
+  "summary": "Computer science student focused on data-driven software engineering, with project experience in machine learning, backend APIs, and user-facing automation tools.",
+  "education": [
+    {
+      "degree": "Bachelor of Computer Science",
+      "institution": "University of Melbourne",
+      "location": "Melbourne, Australia",
+      "dates": "2024 - 2026",
+      "details": [
+        "Relevant coursework: Machine Learning, Algorithms, Database Systems, Software Modelling and Design",
+        "Built assessed projects in Python, Java, and C"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Campus Tech Society",
+      "role": "Software Project Volunteer",
+      "location": "Melbourne, Australia",
+      "dates": "Mar 2025 - Nov 2025",
+      "bullets": [
+        "Developed a Flask-based event registration tool with CSV export to reduce manual spreadsheet work for organizers",
+        "Implemented input validation and reusable helper functions to improve reliability during high-volume sign-up periods"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Image Classification Pipeline",
+      "tech_stack": "Python, scikit-learn, PyTorch",
+      "context": "University machine learning project",
+      "bullets": [
+        "Trained and compared classical ML and neural network models using a held-out validation split",
+        "Documented accuracy, failure cases, and overfitting risks to support model selection"
+      ]
+    },
+    {
+      "name": "Job Application Assistant",
+      "tech_stack": "Python, JSON, HTML/CSS",
+      "context": "Personal automation project",
+      "bullets": [
+        "Built structured resume templates and keyword mapping logic for targeted job applications",
+        "Separated content generation from formatting to keep outputs easier to test and review"
+      ]
+    }
+  ],
+  "skills": {
+    "Programming": ["Python", "Java", "C", "SQL"],
+    "Data / Analytics": ["pandas", "scikit-learn", "model evaluation"],
+    "Web / Tools": ["Flask", "Git", "HTML", "CSS"],
+    "Languages": ["English", "Mandarin"]
+  },
+  "certifications_awards": [
+    {
+      "name": "Dean's Honours List",
+      "issuer": "University of Melbourne",
+      "date": "2025",
+      "details": "Academic recognition based on university results."
+    }
+  ],
+  "target_role": "Software Engineering Intern",
+  "target_industry": "Technology",
+  "candidate_level": "student",
+  "style": "modern-minimal",
+  "photo_path": "",
+  "include_photo": false
+}
