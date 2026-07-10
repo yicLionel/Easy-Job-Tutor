@@ -1,45 +1,87 @@
-# Easy-Job-Tutor
+# 🎓 Easy-Job-Tutor — Your AI Resume Coach
 
-[Back to language selection](../../README.md)
+> **Getting no replies after sending out dozens of resumes? Don't know how to make your experiences sound impressive? Easy-Job-Tutor is like having an AI career coach who knows what recruiters look for — it walks you through every step, from analyzing job descriptions to polishing your resume until it shines.**
 
-## Skill Preview
+[回到中文](https://github.com/your-username/Easy-Job-Tutor-skills#readme) · [Français](../README.fr.md) · [日本語](../README.ja.md) · [Español](../README.es.md) · [Deutsch](../README.de.md)
 
-![Easy-Job-Tutor workflow](../../assets/readme/skill-workflow.svg)
+---
 
-![ATS-friendly resume PDF preview](../../assets/readme/resume-pdf-preview.png)
+## 🤔 Does This Sound Like You?
 
-## What It Does
+| You're struggling with... | Here's how this tool helps |
+| :--- | :--- |
+| **"I don't have much work experience. What do I even put on my resume?"** | It helps you dig into class projects, campus activities, and competitions — things you already did but didn't realize were valuable — and shows you how to present them like an employer would want to see |
+| **"The job description lists so many requirements I don't meet."** | It breaks down every requirement and shows you where you're strong, where you're weak, and what missing info you can add — **no lying, but making the most of what you actually have** |
+| **"I keep rewriting my resume but it still sounds the same."** | Instead of just swapping synonyms, it asks structured questions to help you unpack your experiences and **add real substance, not just fancy words** |
+| **"I've sent 50+ applications and heard nothing back."** | It scores your resume across 5 dimensions — JD match, ATS readability, recruiter scan-ability, interview readiness, and credibility — so you know **exactly what to fix** |
+| **"I freeze when interviewers ask about details on my resume."** | It turns every line on your resume into **potential interview questions + how you should answer them**, so you can prepare beforehand |
 
-Easy-Job-Tutor is an open-source Codex Skill for job description analysis, resume optimization, application materials, interview preparation, and ATS-friendly PDF resume generation.
+> 💡 **Bottom line: It does with AI what you'd otherwise pay a career coach hundreds of dollars for — and it never makes things up.**
 
-It helps users turn a target role and their real background into stronger job-search materials.
+---
 
-It can:
+## 🎯 What It Can Do For You
 
-- Analyze job descriptions and extract role requirements.
-- Score resume fit against a target JD.
-- Rewrite resume bullets using real evidence only.
-- Draft application emails, cover letters, and referral messages.
-- Prepare interview questions and answer frameworks.
-- Generate clean, text-based PDF resumes when explicitly requested.
+### 1️⃣ Read Between the Lines of a Job Description
+Paste any job description and it will tell you:
+- What the role **actually requires** (beyond the surface-level words)
+- **Hard skills** (tools, technologies) vs **soft skills** (communication, teamwork)
+- **Hidden filters** — unspoken expectations recruiters will judge you on
 
-## Resume PDF Builder
+### 2️⃣ Match Your Experience Against the Job
+Give it your resume and the job description, and it compares them point by point:
+- ✅ **Strong match**: Your experience lines up perfectly
+- ⚠️ **Weak match**: Related but not compelling enough
+- ❌ **Gap**: Missing evidence — here's what you need to add
 
-The optional Resume PDF Builder turns optimized resume content into a polished, recruiter-friendly PDF.
+### 3️⃣ Ask Targeted Questions to Fill in Blanks
+Instead of inventing things you never did, it asks specific questions like:
+> "You mentioned you handled social media for your student club — what tools did you use? How many posts? What was the engagement?"
+> "Your class project — what was the grade? How many teammates? Any recognition?"
 
-Supported styles:
+These details are what turn a vague resume into a convincing one.
 
-- `Classic Professional`: finance, consulting, law, government, education, traditional corporate, administration, accounting, and audit.
-- `Modern Minimal`: default; technology, data, AI, software engineering, product, business analyst, startup, and internet roles.
-- `Creative Clean`: marketing, content, media, branding, design-adjacent, and creator roles.
+### 4️⃣ Rewrite Your Bullet Points
+Before: "Responsible for WeChat official account operations"
+After: 🎯 **"Managed my department's WeChat account — published 40+ articles in 6 months, highest single piece reached 32K reads, grew followers by 1,200."**
 
-Photo behavior:
+### 5️⃣ Draft Application Materials
+- 📧 **Cold application emails**
+- ✉️ **Cover letters**
+- 💬 **LinkedIn / referral messages**
 
-- No photo by default.
-- If the user wants a photo, they must upload a clear, formal, front-facing image.
-- The builder uses only user-provided photos and keeps resume text selectable.
+### 6️⃣ Prepare for Interviews
+Each bullet point on your optimized resume gets turned into:
+- Likely **interview questions**
+- Suggested **answer frameworks**
 
-## Installation
+### 7️⃣ Generate a Beautiful PDF Resume (Optional)
+When you're ready for the final version, it can lay out your optimized content into a clean, recruiter-friendly PDF. Three styles:
+
+| Style | Best for |
+| :--- | :--- |
+| `Classic Professional` | Finance, consulting, law, government, education, accounting, audit |
+| `Modern Minimal` | **Default** — Tech, data, AI, product, startups, internet |
+| `Creative Clean` | Marketing, content, media, branding, design |
+
+---
+
+## 🔧 Installation (3 Steps)
+
+You need an AI tool that supports Skills — like Claude Code, Codex CLI, OpenCode, or Hermes Agent.
+
+> 🖥️ **If you're not comfortable with the command line, copy these steps to a friend who codes, or ask your AI assistant "how do I install Easy-Job-Tutor" — it can walk you through it.**
+
+### Step 1: Download the Project
+
+Open your **Terminal** and paste:
+
+```bash
+git clone https://github.com/your-username/Easy-Job-Tutor-skills.git
+cd Easy-Job-Tutor-skills/Easy-Job-Tutor
+```
+
+### Step 2: Install Dependencies (for PDF export)
 
 ```bash
 python3 -m venv .venv
@@ -47,39 +89,60 @@ python3 -m venv .venv
 .venv/bin/python -m playwright install chromium
 ```
 
-To install as a local Codex Skill:
+> 🔔 **Don't worry if this step fails!** The core features (JD analysis, resume optimization, interview prep) work fine without it. PDF export is a bonus feature.
 
+### Step 3: Install Into Your AI Tool
+
+**👉 For Codex CLI / Claude Code / OpenCode:**
 ```bash
 cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
 ```
 
-## Build a Sample PDF
-
+**👉 For Hermes Agent:**
 ```bash
-.venv/bin/python scripts/build_resume_pdf.py \
-  --input examples/sample-resume.json \
-  --output outputs/resume.pdf \
-  --html outputs/resume.html \
-  --style modern-minimal \
-  --page-size A4
+cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
 ```
 
-Verify the generated PDF:
+Done! Your AI assistant now has the Easy-Job-Tutor skill.
 
-```bash
-.venv/bin/python scripts/verify_resume_pdf.py \
-  --pdf outputs/resume.pdf \
-  --html outputs/resume.html
-```
+---
 
-## Quality Principles
+## 🚀 Quick Start
 
-- Do not fabricate resume content.
-- Prefer ATS-friendly, text-based PDF output.
-- Avoid excessive decoration, complex tables, skill bars, and image-only resumes.
-- Verify layout quality before treating the PDF as final.
-- Do not create fake download links in examples or responses.
+### How to Use It — Just Tell Your AI:
+
+Send the **job description (JD)** and your **current resume** to your AI, then say:
+
+> **"Use Easy-Job-Tutor to analyze this job description and optimize my resume. Don't make anything up — if you're missing key info, ask me first."**
+
+The AI will walk through the full process:
+1. ✅ Analyze the job requirements
+2. ✅ Compare against your experience
+3. ✅ Ask you for any missing details
+4. ✅ Rewrite your resume content
+5. ✅ (Optional) Generate a PDF
+
+### Or ask for just one thing:
+
+| What you want | Say this to your AI |
+| :--- | :--- |
+| Only analyze a job | "Use Easy-Job-Tutor to analyze this JD and tell me what the role really wants" |
+| Only rewrite resume | "Reference this JD and rewrite my work experience more professionally" |
+| Write a cover letter | "Help me write a cover letter for this job" |
+| Interview prep | "Help me prepare interview questions based on my optimized resume" |
+| Generate PDF | "Generate my resume PDF in Modern Minimal style" |
+
+---
+
+## ⚠️ Important Notes
+
+- ✅ **Never fabricates**: Won't invent degrees, companies, projects, metrics, or awards
+- ✅ **Asks before writing**: If evidence is missing, it asks you — never writes fiction into your resume
+- ✅ **Designed for recruiters**: Prioritizes making your resume scannable and matchable, not keyword-stuffed
+- ✅ **Interview-proof**: Everything in your final resume is something you can actually talk about
+
+---
 
 ## License
 
-MIT
+MIT — Free to use and improve.

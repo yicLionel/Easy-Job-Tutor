@@ -1,45 +1,61 @@
-# Easy-Job-Tutor
+# 🎓 Easy-Job-Tutor — 你的 AI 简历教练
 
 [返回语言选择](../../README.md)
 
-## Skill Preview
+> **投了简历石沉大海？不知道自己的经历怎么写才吸引人？Easy-Job-Tutor 就像一个懂 HR、懂招聘、也懂你的 AI 简历老师，手把手帮你把简历改到让面试官眼前一亮。**
 
-![Easy-Job-Tutor workflow](../../assets/readme/skill-workflow.svg)
+---
 
-![ATS-friendly resume PDF preview](../../assets/readme/resume-pdf-preview.png)
+## 🤔 你是不是也有这些烦恼？
 
-## 功能简介
+| 你的困扰 | 这个工具能帮你什么 |
+| :--- | :--- |
+| **"我没什么实习经历，简历都不知道写什么"** | 它会帮你从课程项目、校园活动、比赛经历里挖出"值钱"的内容，把这些看似普通的经历写得像岗位真正想要的样子 |
+| **"JD 上写的要求我好多都不满足，根本不敢投"** | 它会帮你分析每个要求你差在哪里、强在哪里，还会追着问你要关键素材——**不编造，但把你有的东西展示到最好** |
+| **"简历改来改去就是那几个词，自己都看腻了"** | 它不会只让你换几个同义词，而是用一系列结构化问题帮你把经历拆开重组，**填实信息，不是只涂脂抹粉** |
+| **"投了 50 份都没回音，不知道自己哪里不行"** | 它会从 JD 匹配度、HR 扫描体验、ATS 系统友好度、面试可讲述性、真实性五个维度给你的简历打分，告诉你**具体哪里可以改进** |
+| **"面试被问到简历细节就卡壳"** | 它会把你的简历内容转成**面试官会怎么问、你该怎么答**的问题清单，让你提前练好 |
 
-Easy-Job-Tutor 是一个开源 Codex Skill，用于求职场景下的 JD 分析、简历优化、申请材料撰写、面试准备，以及可选的 ATS 友好 PDF 简历生成。
+---
 
-它可以帮助用户把目标岗位和真实经历转化成更有竞争力的求职材料。
+## 🎯 它到底能帮你做什么？
 
-它可以帮助你：
+### 1️⃣ 读懂招聘要求（JD 分析）
+- 这个岗位**到底要你干什么**（不只是字面意思）
+- **硬技能**和**软技能**分别是什么
+- **隐性条件**——JD 没明说但 HR 心里有数的要求
 
-- 分析岗位 JD，提取职责、技能要求和关键词。
-- 评估简历与目标岗位的匹配度。
-- 基于真实经历重写简历 bullet points。
-- 撰写申请邮件、Cover Letter 和内推 / LinkedIn 私信。
-- 准备面试问题和回答框架。
-- 在用户明确要求时生成干净、文本可提取的 PDF 简历。
+### 2️⃣ 拿你的经历跟岗位匹配（差距诊断）
+- ✅ **强证据**：你的经历正好对上这个要求
+- ⚠️ **弱证据**：沾边但写得不够出彩
+- ❌ **缺口**：这个要求你确实还没素材，需要补充
 
-## Resume PDF Builder
+### 3️⃣ 追问你没想起来的关键素材
+不会编造，而是问具体问题帮你想起来细节。
 
-可选的 Resume PDF Builder 可以把优化后的简历内容生成一份专业、清晰、适合招聘方阅读的 PDF。
+### 4️⃣ 重写简历内容
+把你原来干巴巴的描述改得有理有据、有数据支撑。
 
-支持三种风格：
+### 5️⃣ 帮你写求职信、申请邮件、内推私信
 
-- `Classic Professional`：适合金融、咨询、法律、政府、教育、传统企业、行政、会计、审计。
-- `Modern Minimal`：默认风格，适合科技、数据、AI、软件工程、产品、商业分析、创业公司和互联网岗位。
-- `Creative Clean`：适合市场、内容、媒体、品牌、设计相关和创作者岗位。
+### 6️⃣ 准备面试
+每条简历内容转成**面试官会问什么 + 你怎么答**的问题清单。
 
-证件照规则：
+### 7️⃣ 生成漂亮的简历 PDF（可选）
+三种风格可选：`Classic Professional`（金融/咨询/国企）、`Modern Minimal`（科技/互联网/创业公司）、`Creative Clean`（市场/设计/新媒体）
 
-- 默认不添加证件照。
-- 如果用户需要证件照，必须上传清晰、正式、正面的照片。
-- 只使用用户上传的照片，并保持简历正文文本可选择、可复制、可被 ATS 解析。
+---
 
-## 安装
+## 🔧 安装到你的 AI
+
+### 第一步：下载
+
+```bash
+git clone https://github.com/你的用户名/Easy-Job-Tutor-skills.git
+cd Easy-Job-Tutor-skills/Easy-Job-Tutor
+```
+
+### 第二步：安装依赖（PDF 导出需要）
 
 ```bash
 python3 -m venv .venv
@@ -47,38 +63,40 @@ python3 -m venv .venv
 .venv/bin/python -m playwright install chromium
 ```
 
-安装为本地 Codex Skill：
+> 🔔 如果这一步报错没关系——**核心功能不需要这一步**。
 
+### 第三步：安装到你的 AI 工具
+
+**Codex CLI / Claude Code / OpenCode：**
 ```bash
 cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
 ```
 
-## 生成示例 PDF
-
+**Hermes Agent：**
 ```bash
-.venv/bin/python scripts/build_resume_pdf.py \
-  --input examples/sample-resume.json \
-  --output outputs/resume.pdf \
-  --html outputs/resume.html \
-  --style modern-minimal \
-  --page-size A4
+cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
 ```
 
-校验生成的 PDF：
+---
 
-```bash
-.venv/bin/python scripts/verify_resume_pdf.py \
-  --pdf outputs/resume.pdf \
-  --html outputs/resume.html
-```
+## 🚀 快速开始
 
-## 质量原则
+把**岗位描述（JD）**和你的**现有简历**发给 AI，然后说：
 
-- 不编造简历内容。
-- 优先生成 ATS 友好的文本型 PDF。
-- 避免过度装饰、复杂表格、技能条和纯图片简历。
-- 在最终使用前检查 PDF 版式质量。
-- 不在示例或回复中创建假的下载链接。
+> **"请用 Easy-Job-Tutor 帮我分析这个岗位，然后优化我的中文简历。不要编造经历，缺了什么先问我。"**
+
+AI 就会一步步帮你完成全部流程。
+
+---
+
+## ⚠️ 重要提醒
+
+- ✅ **不编造**：不会帮你编造学历、公司、项目经历或数据
+- ✅ **先追问再写**：没有证据的内容会先问你
+- ✅ **为 HR 设计**：让 HR 一眼看出你的匹配度
+- ✅ **面试经得起追问**：所有内容你都能讲得出来
+
+---
 
 ## 开源协议
 
