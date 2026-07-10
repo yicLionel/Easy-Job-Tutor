@@ -1,5 +1,9 @@
 # Scoring Rubric
 
+This five-point rubric is a supporting signal inside the five-dimension review (`JD 匹配`, `ATS`, `HR`, `面试准备度`, and `可信度`); it is not a substitute for evidence-based review.
+
+Do not assign a zero or a full score by default when a required fact or JD is missing. Mark the relevant dimension as `暂无法评分` and state what evidence is needed.
+
 Score each category from 1 to 5.
 
 | Category | 1 | 3 | 5 |
