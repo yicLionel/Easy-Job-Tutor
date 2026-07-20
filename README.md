@@ -80,7 +80,7 @@
 打开电脑的**终端**（Terminal / 命令提示符），粘贴下面的命令：
 
 ```bash
-git clone https://github.com/你的用户名/Easy-Job-Tutor-skills.git
+git clone https://github.com/yicLionel/Easy-Job-Tutor.git
 cd Easy-Job-Tutor-skills/Easy-Job-Tutor
 ```
 
@@ -98,7 +98,17 @@ python3 -m venv .venv
 
 **👉 如果你用 Codex CLI / Claude Code / OpenCode：**
 ```bash
+# Codex CLI
+mkdir -p ~/.codex/skills
 cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
+
+# Claude Code
+mkdir -p ~/.claude/skills
+cp -R Easy-Job-Tutor ~/.claude/skills/easy-job-tutor
+
+# OpenCode
+mkdir -p ~/.config/opencode/skills
+cp -R Easy-Job-Tutor ~/.config/opencode/skills/easy-job-tutor
 ```
 
 **👉 如果你用 Hermes Agent：**
