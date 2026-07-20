@@ -81,7 +81,7 @@
 
 ```bash
 git clone https://github.com/yicLionel/Easy-Job-Tutor.git
-cd Easy-Job-Tutor-skills/Easy-Job-Tutor
+cd Easy-Job-Tutor
 ```
 
 ### 第二步：安装依赖（让 PDF 导出功能正常工作）
@@ -96,16 +96,27 @@ python3 -m venv .venv
 
 ### 第三步：安装到你的 AI 工具
 
-**👉 如果你用 Codex CLI / Claude Code / OpenCode：**
+先回到上一级目录：
+
+```bash
+cd ..
+```
+
+然后**只执行你正在使用的 AI 工具对应的一段命令**：
+
 ```bash
 # Codex CLI
 mkdir -p ~/.codex/skills
 cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
+```
 
+```bash
 # Claude Code
 mkdir -p ~/.claude/skills
 cp -R Easy-Job-Tutor ~/.claude/skills/easy-job-tutor
+```
 
+```bash
 # OpenCode
 mkdir -p ~/.config/opencode/skills
 cp -R Easy-Job-Tutor ~/.config/opencode/skills/easy-job-tutor
@@ -113,6 +124,7 @@ cp -R Easy-Job-Tutor ~/.config/opencode/skills/easy-job-tutor
 
 **👉 如果你用 Hermes Agent：**
 ```bash
+mkdir -p ~/.hermes/skills/software-development
 cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
 ```
 
