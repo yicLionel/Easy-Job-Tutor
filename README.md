@@ -86,10 +86,22 @@ cd Easy-Job-Tutor
 
 ### 第二步：安装依赖（让 PDF 导出功能正常工作）
 
+请根据你的操作系统，执行对应的一组命令：
+
+**macOS / Linux**
+
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m playwright install chromium
+```
+
+**Windows PowerShell**
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m playwright install chromium
 ```
 
 > 🔔 如果这一步报错，不要慌——**这个 Skill 的核心功能（JD 分析、简历优化、面试准备）不需要这一步也能用**。PDF 导出是额外的排版工具，暂时用不上也不影响你优化简历。
