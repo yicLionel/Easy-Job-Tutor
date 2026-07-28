@@ -13,7 +13,7 @@ export const WORKFLOW_STEPS = [
 
 export const FACT_STATUSES = ["confirmed", "pending_confirmation", "model_inference"];
 export const EVIDENCE_STRENGTHS = ["strong", "partial", "none", "pending"];
-export const SESSION_SCHEMA_VERSION = 3;
+export const SESSION_SCHEMA_VERSION = 4;
 
 export function createEmptySession() {
   return {

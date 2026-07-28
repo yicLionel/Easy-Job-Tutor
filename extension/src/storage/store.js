@@ -52,28 +52,21 @@ export function migrateSession(session) {
     || session.questions?.length
     || session.suggestions?.length,
   );
-  if (!hasLegacyAnalysis) {
+  const mustReconfirmJob = Boolean(session.jd?.confirmedAt);
+  if (!hasLegacyAnalysis && !mustReconfirmJob) {
     return {
       session: { ...session, sessionSchemaVersion: SESSION_SCHEMA_VERSION },
       migrated: true,
     };
   }
 
-  const materialsConfirmed = Boolean(session.jd?.confirmedAt && session.resume?.confirmedAt);
-  const nextStep = materialsConfirmed
-    ? "diagnosing"
-    : session.jd?.confirmedAt
-      ? "resume_review"
-      : session.jd
-        ? "jd_review"
-        : "setup";
-
   return {
     migrated: true,
     session: {
       ...session,
       sessionSchemaVersion: SESSION_SCHEMA_VERSION,
-      step: nextStep,
+      step: session.jd ? "jd_review" : "setup",
+      jd: session.jd ? { ...session.jd, confirmedAt: null, requiresRefresh: true } : null,
       facts: [],
       evidence: [],
       questions: [],
@@ -84,7 +77,7 @@ export function migrateSession(session) {
       timings: {},
       finalResume: null,
       finalReport: null,
-      migrationNotice: "检测到旧版本分析结果。已保留 JD 与简历，请按 v0.3 规则重新诊断。",
+      migrationNotice: "检测到旧版本 JD 或分析结果。已保留原文供核对，请重新读取并确认 JD 后再诊断。",
       updatedAt: new Date().toISOString(),
     },
   };

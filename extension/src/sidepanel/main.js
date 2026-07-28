@@ -31,7 +31,7 @@ function render() {
       ${session.migrationNotice ? `<section class="migration-notice"><strong>版本升级提示</strong><p>${escapeHtml(session.migrationNotice)}</p></section>` : ""}
       <section class="hero"><span class="eyebrow">岗位材料准备度</span><h1>${score?.readinessScore ?? "先确认材料"}</h1><p>${score ? `证据覆盖率 ${score.evidenceCoverage}% · 评分规则 ${score.rubricVersion}` : "插件会读取当前职位，并在本地解析你的 PDF 或 DOCX 简历。"}</p></section>
       <section class="card-grid">
-        <article class="panel-card"><span class="step-number">1</span><div><h2>读取当前 JD</h2><p id="job-status" class="muted">${job ? `${escapeHtml(job.title || "未识别职位")} · ${escapeHtml(job.company || "公司待确认")} · 完整度 ${job.completeness}%` : "尚未读取当前页面"}</p><button id="read-job" class="primary">${job ? "重新读取" : "读取职位"}</button>${job ? `<button id="confirm-job" class="secondary">${job.confirmedAt ? "已确认 JD" : "确认 JD"}</button>` : ""}</div></article>
+        <article class="panel-card"><span class="step-number">1</span><div><h2>读取当前 JD</h2><p id="job-status" class="muted">${job ? `${escapeHtml(job.title || "未识别职位")} · ${escapeHtml(job.company || "公司待确认")} · 完整度 ${job.completeness}%` : "尚未读取当前页面"}</p><button id="read-job" class="primary">${job ? "重新读取" : "读取职位"}</button>${job ? job.requiresRefresh ? `<span class="muted">请先重新读取当前职位</span>` : `<button id="confirm-job" class="secondary">${job.confirmedAt ? "已确认 JD" : "确认 JD"}</button>` : ""}</div></article>
         <article class="panel-card"><span class="step-number">2</span><div><h2>上传简历</h2><p id="resume-status" class="muted">${resume ? `已保存：${escapeHtml(resume.fileName)}${resume.confirmedAt ? " · 已确认" : " · 待确认"}` : "支持文本型 PDF 和 DOCX"}</p><input id="resume-file" type="file" accept=".pdf,.docx" hidden /><button id="upload-resume" class="secondary">选择文件</button>${resume ? `<button id="confirm-resume" class="secondary">${resume.confirmedAt ? "已确认简历" : "确认简历"}</button>` : ""}</div></article>
       </section>
       ${job ? `<section class="review-card"><h2>确认 JD 文本</h2><textarea id="job-text" class="review-text">${escapeHtml(job.rawText || job.responsibilities || "")}</textarea><p class="muted">可先修正职位页面误识别的内容，再确认。</p></section>` : ""}
@@ -137,7 +137,7 @@ async function readCurrentJob() {
         return chrome.scripting.executeScript({ target: { tabId: tab.id }, files: [contentFile] });
       },
     });
-    state.session = { ...state.session, jd: job, step: "jd_review", updatedAt: new Date().toISOString() };
+    state.session = { ...state.session, jd: { ...job, requiresRefresh: false }, step: "jd_review", updatedAt: new Date().toISOString() };
     await saveSession(state.session);
     render();
   } catch (error) {
@@ -146,6 +146,7 @@ async function readCurrentJob() {
 }
 
 async function confirmJob() {
+  if (state.session.jd.requiresRefresh) throw new Error("请先重新读取当前职位");
   const text = document.querySelector("#job-text")?.value.trim() || state.session.jd.rawText;
   state.session = { ...state.session, jd: { ...state.session.jd, rawText: text, responsibilities: text, confirmedAt: new Date().toISOString() }, step: "resume_review", updatedAt: new Date().toISOString() };
   await saveSession(state.session);

@@ -142,7 +142,7 @@ test("history keeps only the 20 most recent records", async () => {
   await clearAllData();
 });
 
-test("legacy analysis is invalidated while confirmed materials are preserved", async () => {
+test("legacy analysis and JD confirmation are invalidated while source materials are preserved", async () => {
   const { session: migrated, migrated: didMigrate } = migrateSession({
     id: "legacy-session",
     sessionSchemaVersion: 2,
@@ -158,11 +158,14 @@ test("legacy analysis is invalidated while confirmed materials are preserved", a
 
   assert.equal(didMigrate, true);
   assert.equal(migrated.sessionSchemaVersion, SESSION_SCHEMA_VERSION);
-  assert.equal(migrated.step, "diagnosing");
+  assert.equal(migrated.step, "jd_review");
   assert.equal(migrated.jd.title, "Java 开发");
+  assert.equal(migrated.jd.confirmedAt, null);
+  assert.equal(migrated.jd.requiresRefresh, true);
   assert.equal(migrated.resume.text, "Java 项目经历");
+  assert.equal(migrated.resume.confirmedAt, "2026-07-28T00:00:00.000Z");
   assert.equal(migrated.scoring, null);
   assert.deepEqual(migrated.facts, []);
   assert.deepEqual(migrated.suggestions, []);
-  assert.match(migrated.migrationNotice, /v0\.3/);
+  assert.match(migrated.migrationNotice, /重新读取并确认 JD/);
 });
