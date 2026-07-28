@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Easy-Job-Tutor",
+  "version": "0.3.0",
+  "description": "在招聘页面旁，用可验证证据诊断简历与岗位的匹配度。",
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_title": "打开 Easy-Job-Tutor"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://www.liepin.com/*",
+    "https://liepin.com/*",
+    "https://www.zhipin.com/*",
+    "https://zhipin.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.liepin.com/*",
+        "https://liepin.com/*",
+        "https://www.zhipin.com/*",
+        "https://zhipin.com/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "sidepanel.html"
+}

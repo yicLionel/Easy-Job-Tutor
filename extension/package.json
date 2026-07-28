@@ -1,0 +1,21 @@
+{
+  "name": "easy-job-tutor-extension",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "verify:dist": "node verify-dist.mjs",
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "mammoth": "^1.9.1",
+    "pdfjs-dist": "^5.4.149"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.7.1",
+    "esbuild": "^0.25.8",
+    "vite": "^7.0.6"
+  }
+}

@@ -7,3 +7,21 @@ outputs/
 *.pdf
 *.html
 .DS_Store
+
+# JavaScript dependencies and generated builds
+node_modules/
+dist/
+
+# Local development state and generated previews
+.superpowers/brainstorm/
+preview/
+docs/superpowers/
+
+# Local task planning and verification notes
+extension/notes.md
+extension/task_plan.md
+extension/rubric-alignment-plan.md
+extension/four-step-upgrade-report.md
+
+# Required extension HTML entry point
+!extension/sidepanel.html
