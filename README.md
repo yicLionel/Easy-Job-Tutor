@@ -7,7 +7,7 @@
 ![Language 中文优先](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87%E4%BC%98%E5%85%88-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
 
-[English](docs/readme/README.en.md) · [Français](docs/readme/README.fr.md) · [日本語](docs/readme/README.ja.md) · [Español](docs/readme/README.es.md) · [Deutsch](docs/readme/README.de.md) · [快速开始 ↓](#-快速开始) · [安装到你的 AI ↓](#-安装到你的-ai-只需三步)
+[English](docs/readme/README.en.md) · [Français](docs/readme/README.fr.md) · [日本語](docs/readme/README.ja.md) · [Español](docs/readme/README.es.md) · [Deutsch](docs/readme/README.de.md) · [快速开始 ↓](#-快速开始) · [安装到你的 AI ↓](#-安装到你的-ai-一行命令)
 
 ---
 
@@ -69,76 +69,30 @@
 
 ---
 
-## 🔧 安装到你的 AI（只需三步）
+## 🔧 安装到你的 AI（一行命令）
 
 你需要一个支持 Skill 的 AI 助手（比如 Claude Code、Codex CLI、OpenCode 或 Hermes Agent），然后把 Easy-Job-Tutor 装进去。
 
 > 🖥️ **如果你不懂命令行（终端），可以把这些步骤复制给你的程序员朋友，或者在 AI 工具里问"怎么安装 Easy-Job-Tutor"——AI 会一步一步教你的。**
 
-### 第一步：下载这个项目
+### 一键安装
 
-打开电脑的**终端**（Terminal / 命令提示符），粘贴下面的命令：
-
-```bash
-git clone https://github.com/yicLionel/Easy-Job-Tutor.git
-cd Easy-Job-Tutor
-```
-
-### 第二步：安装依赖（让 PDF 导出功能正常工作）
-
-请根据你的操作系统，执行对应的一组命令：
+根据你的操作系统，复制粘贴对应的一行命令即可。它会自动完成：**创建虚拟环境 → 安装依赖（含 PDF 导出）→ 检测并安装到你已装好的 AI 工具**。
 
 **macOS / Linux**
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m playwright install chromium
+git clone https://github.com/yicLionel/Easy-Job-Tutor.git && cd Easy-Job-Tutor && python3 install.py
 ```
 
-**Windows PowerShell**
+**Windows（PowerShell）**
 
 ```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m playwright install chromium
+git clone https://github.com/yicLionel/Easy-Job-Tutor.git; cd Easy-Job-Tutor; py install.py
 ```
 
-> 🔔 如果这一步报错，不要慌——**这个 Skill 的核心功能（JD 分析、简历优化、面试准备）不需要这一步也能用**。PDF 导出是额外的排版工具，暂时用不上也不影响你优化简历。
-
-### 第三步：安装到你的 AI 工具
-
-先回到上一级目录：
-
-```bash
-cd ..
-```
-
-然后**只执行你正在使用的 AI 工具对应的一段命令**：
-
-```bash
-# Codex CLI
-mkdir -p ~/.codex/skills
-cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
-```
-
-```bash
-# Claude Code
-mkdir -p ~/.claude/skills
-cp -R Easy-Job-Tutor ~/.claude/skills/easy-job-tutor
-```
-
-```bash
-# OpenCode
-mkdir -p ~/.config/opencode/skills
-cp -R Easy-Job-Tutor ~/.config/opencode/skills/easy-job-tutor
-```
-
-**👉 如果你用 Hermes Agent：**
-```bash
-mkdir -p ~/.hermes/skills/software-development
-cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
-```
+> 💡 **可选参数**：暂时用不上 PDF 导出，加 `--skip-pdf`；不想自动装进 AI 工具，加 `--skip-tools`；脚本没检测到你的工具时，用 `--tool codex / claude / opencode / hermes` 强制指定。
+> 🔔 如果依赖安装报错，不要慌——**核心功能（JD 分析、简历优化、面试准备）不需要它也能用**，PDF 导出是可选的。
 
 > 安装完成后，你的 AI 助手就学会这项技能了！
 
@@ -147,6 +101,8 @@ cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
 ## 🚀 快速开始
 
 ### 怎么用？—— 跟你的 AI 这样说就行：
+
+> 💡 **两种召唤方式**：在提示词里直接说「使用 Easy-Job-Tutor」，或者如果你的 AI 工具支持斜杠命令，直接输入 `/easy-job-tutor` 也能召唤这个技能。
 
 把你要投的**岗位描述（JD）** 和你的**现有简历**发给 AI，然后直接说：
 

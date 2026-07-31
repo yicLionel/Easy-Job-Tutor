@@ -2,7 +2,12 @@
 
 > **Getting no replies after sending out dozens of resumes? Don't know how to make your experiences sound impressive? Easy-Job-Tutor is like having an AI career coach who knows what recruiters look for — it walks you through every step, from analyzing job descriptions to polishing your resume until it shines.**
 
-[回到中文](https://github.com/your-username/Easy-Job-Tutor-skills#readme) · [Français](../README.fr.md) · [日本語](../README.ja.md) · [Español](../README.es.md) · [Deutsch](../README.de.md)
+![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
+![Language English](https://img.shields.io/badge/Language-English-blue)
+![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
+
+[回到中文](../../README.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Quick Start ↓](#-quick-start) · [Installation ↓](#installation-one-line)
 
 ---
 
@@ -66,42 +71,30 @@ When you're ready for the final version, it can lay out your optimized content i
 
 ---
 
-## 🔧 Installation (3 Steps)
+## 🔧 Installation (One Line)
 
 You need an AI tool that supports Skills — like Claude Code, Codex CLI, OpenCode, or Hermes Agent.
 
 > 🖥️ **If you're not comfortable with the command line, copy these steps to a friend who codes, or ask your AI assistant "how do I install Easy-Job-Tutor" — it can walk you through it.**
 
-### Step 1: Download the Project
+### One-Line Install
 
-Open your **Terminal** and paste:
+Copy and paste the one-liner for your OS. It automatically: **creates a virtual environment → installs dependencies (incl. PDF export) → detects and installs into your AI tool**.
 
-```bash
-git clone https://github.com/your-username/Easy-Job-Tutor-skills.git
-cd Easy-Job-Tutor-skills/Easy-Job-Tutor
-```
-
-### Step 2: Install Dependencies (for PDF export)
+**macOS / Linux**
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m playwright install chromium
+git clone https://github.com/yicLionel/Easy-Job-Tutor.git && cd Easy-Job-Tutor && python3 install.py
 ```
 
-> 🔔 **Don't worry if this step fails!** The core features (JD analysis, resume optimization, interview prep) work fine without it. PDF export is a bonus feature.
+**Windows (PowerShell)**
 
-### Step 3: Install Into Your AI Tool
-
-**👉 For Codex CLI / Claude Code / OpenCode:**
-```bash
-cp -R Easy-Job-Tutor ~/.codex/skills/easy-job-tutor
+```powershell
+git clone https://github.com/yicLionel/Easy-Job-Tutor.git; cd Easy-Job-Tutor; py install.py
 ```
 
-**👉 For Hermes Agent:**
-```bash
-cp -R Easy-Job-Tutor ~/.hermes/skills/software-development/easy-job-tutor
-```
+> 💡 **Optional flags**: add `--skip-pdf` to skip PDF-export dependencies; `--skip-tools` to skip auto-installing into your AI tool; `--tool codex / claude / opencode / hermes` to force-install into a specific tool when it isn't detected automatically.
+> 🔔 **Don't worry if a step fails!** The core features (JD analysis, resume optimization, interview prep) work fine without it. PDF export is a bonus feature.
 
 Done! Your AI assistant now has the Easy-Job-Tutor skill.
 
@@ -110,6 +103,8 @@ Done! Your AI assistant now has the Easy-Job-Tutor skill.
 ## 🚀 Quick Start
 
 ### How to Use It — Just Tell Your AI:
+
+> 💡 **Two ways to invoke it**: mention "use Easy-Job-Tutor" in your prompt, or type `/easy-job-tutor` as a slash command if your AI tool supports it.
 
 Send the **job description (JD)** and your **current resume** to your AI, then say:
 
@@ -134,6 +129,103 @@ The AI will walk through the full process:
 
 ---
 
+## 💬 Reference Usage: Hand Your Real Experience to the AI
+
+The examples below are fictional and only illustrate how to provide material. In practice, only fill in experiences you can explain and verify; if you don't know a figure, write "TBD" and never let the AI guess or fabricate.
+
+### Example 1: Applying for a Data Analytics Internship Without Any Internship
+
+Send your course project, club experience, and the JD together to the AI:
+
+```text
+Use Easy-Job-Tutor to help me prepare a Chinese resume for a data analytics internship.
+
+Target JD:
+- Proficient in SQL, Python, and Excel; able to do data cleaning and basic analysis;
+- Visualization or business analysis project experience preferred;
+- Able to collaborate with product and operations teams and report findings clearly.
+
+My real experience:
+- Completed a campus food-delivery survey analysis course project with 3 classmates;
+- I cleaned 1,200 valid questionnaires with Python and built charts with Excel;
+- Final deliverables: a 12-page analysis report and a class presentation;
+- I have never run a real A/B test and don't know whether the report was adopted by any business.
+
+Please first output: a mapping table of JD requirements vs. my experience, and the
+5 most important questions I need to answer. Then write resume bullets based only on
+confirmed facts. Do not present a course project as a corporate internship.
+```
+
+This gives you project descriptions that stand up to follow-up questions — not homework repackaged as work experience.
+
+### Example 2: Moving from Operations to AI Product Manager
+
+When switching careers, the key is separating direct experience, transferable skills, and real gaps:
+
+```text
+I'm planning to transition from operations to an AI product manager role. Please use
+Easy-Job-Tutor to run a gap diagnosis first — don't write a final resume yet.
+
+Target JD:
+- Own AI product research, PRD, prototyping, and launch review;
+- Understand the typical boundaries of LLMs, RAG, or Agents;
+- Able to drive collaboration across engineering, design, and business teams.
+
+Confirmed experience:
+- Owned requirements gathering, scheduling, and cross-department communication for corporate training events;
+- Self-taught and built an internal knowledge-base Q&A demo — never launched, no real user data;
+- Wrote feature specs and test checklists, but never owned a full PRD end-to-end.
+
+Please split the content into "Direct Evidence", "Transferable Skills",
+"Learning / Portfolio Evidence", and "Real Gaps", and tell me what facts I still
+need to add before I can use verbs like "own" or "drive".
+```
+
+The goal isn't to pile up AI buzzwords, but to get an honest, executable evidence-building plan.
+
+### Example 3: Using One Experience to Apply for Multiple Roles
+
+Don't blend product, operations, and growth keywords into one one-size-fits-all resume. Build one factual baseline first, then generate separate versions:
+
+```text
+Based on the same factual baseline, generate two separate versions of my resume:
+"Product Operations" and "User Growth".
+
+Fact baseline:
+- Optimized the event signup process for a campus club;
+- Interviewed 15 registrants and distilled 4 recurring issues;
+- Worked with a designer teammate to revise the signup form and reminder copy;
+- Signups grew from 86 last term to 124 this term;
+- I can't confirm the growth was caused entirely by the form redesign.
+
+Job A: Product Operations JD: [paste JD]
+Job B: User Growth JD: [paste JD]
+
+Please first output the evidence mapping and version-diff table for both roles,
+then write resume bullets for each. Don't attribute all team outcomes to me; use
+cautious wording for data where causality can't be confirmed.
+```
+
+Once the content is confirmed, add: "Generate a one-page A4 PDF in Modern Minimal style and check for content overflow, blank pages, and placeholders" to move into the layout/export stage.
+
+---
+
+## 📁 What's Inside the Project
+
+```
+Easy-Job-Tutor/
+├── SKILL.md              ← The AI assistant's "operations manual"
+├── templates/            ← Analysis templates (JD analysis, resume optimization, 5-dimension review...)
+├── design/               ← PDF layout design specs
+├── scripts/              ← PDF generation & verification scripts
+├── examples/             ← Sample data
+├── tests/                ← Tests (quality assurance)
+├── assets/readme/        ← Images
+└── docs/readme/          ← Other-language docs
+```
+
+---
+
 ## ⚠️ Important Notes
 
 - ✅ **Never fabricates**: Won't invent degrees, companies, projects, metrics, or awards
@@ -145,4 +237,13 @@ The AI will walk through the full process:
 
 ## License
 
-MIT — Free to use and improve.
+This project is released under the [MIT License](../../LICENSE). You may use, modify, and distribute it as long as you retain the copyright and license notices.
+
+## 🙏 Acknowledgments & References
+
+Easy-Job-Tutor's initial approach draws on and absorbs the following excellent open-source projects:
+
+- [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn): Key reference for JD-driven resume analysis, real-experience constraints, evidence mapping, and content optimization.
+- [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume): Key reference for web-based resume preview, layout, and PDF export.
+
+This project is a further development and integration of these ideas, adding Easy-Job-Tutor's workflows, templates, verification logic, examples, and documentation, released under the MIT License. When using or redistributing, please comply with the licenses and attribution requirements of this project and its upstream references.
