@@ -2,7 +2,7 @@
 
 > **¿Tus postulaciones caen en el vacío sin respuesta? ¿No sabes cómo redactar tu experiencia para que resulte atractiva? Easy-Job-Tutor es como un profesor de currículum con IA que entiende a los reclutadores (HR), el proceso de selección y también a ti: te acompaña paso a paso hasta dejar tu currículum en un punto que haga que los entrevistadores se queden impresionados.**
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
 ![Language Spanish](https://img.shields.io/badge/Language-Spanish-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
@@ -230,7 +230,7 @@ Easy-Job-Tutor/
 
 ## Licencia de código abierto
 
-Este proyecto se distribuye bajo la [MIT License](../../LICENSE); puedes usarlo, modificarlo y redistribuirlo siempre que se conserven los avisos de copyright y de licencia.
+Este proyecto se distribuye bajo la [Apache License 2.0](../../LICENSE); puedes usarlo, modificarlo y redistribuirlo libremente (incluso con fines comerciales), siempre que se conserve el aviso de copyright y se cumplan los términos de la licencia.
 
 ## 🙏 Agradecimientos y referencias
 
@@ -239,4 +239,4 @@ El planteamiento inicial de Easy-Job-Tutor se inspira y se nutre de los siguient
 - [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn): referencia clave para el análisis de currículum orientado a JD, la restricción de experiencias reales, el mapeo de evidencias y la optimización de contenido.
 - [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume): referencia clave para la previsualización web del currículum, la maquetación y el flujo de exportación a PDF.
 
-Este proyecto se ha desarrollado e integrado a partir de las ideas anteriores, añadiendo el flujo de trabajo, las plantillas, la lógica de validación, los ejemplos y la documentación de Easy-Job-Tutor, y se publica bajo la licencia MIT. Al usarlo o redistribuirlo, cumple también con las licencias y los requisitos de atribución de este proyecto y de los proyectos upstream de referencia.
+Este proyecto se ha desarrollado e integrado a partir de las ideas anteriores, añadiendo el flujo de trabajo, las plantillas, la lógica de validación, los ejemplos y la documentación de Easy-Job-Tutor, y se publica bajo la licencia Apache 2.0. Al usarlo o redistribuirlo, cumple también con las licencias y los requisitos de atribución de este proyecto y de los proyectos upstream de referencia.

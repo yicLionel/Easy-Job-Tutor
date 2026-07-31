@@ -2,7 +2,7 @@
 
 > **Bewerbungen verschickt und nichts gehört? Du weißt nicht, wie du deine Erfahrungen ansprechend darstellst? Easy-Job-Tutor ist wie ein KI-Lebenslauf-Coach, der HR, Recruiting und vor allem dich versteht — er führt dich Schritt für Schritt dabei, deinen Lebenslauf so zu überarbeiten, dass er bei Interviewern Begeisterung weckt.**
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
 ![Language German](https://img.shields.io/badge/Language-German-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
@@ -237,7 +237,7 @@ Easy-Job-Tutor/
 
 ## Lizenz
 
-Dieses Projekt steht unter der [MIT License](../../LICENSE) und darf unter Beibehaltung der Urheberrechts- und Lizenzhinweise verwendet, verändert und weitergegeben werden.
+Dieses Projekt steht unter der [Apache License 2.0](../../LICENSE) und darf unter Beibehaltung des Urheberrechtshinweises und unter Einhaltung der Lizenzbedingungen frei verwendet, verändert und weitergegeben werden (einschließlich kommerzieller Nutzung).
 
 ## 🙏 Danksagung und Referenzen
 
@@ -246,4 +246,4 @@ Die ursprüngliche Idee von Easy-Job-Tutor basiert auf und wurde angeregt durch 
 - [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn): Wichtige Referenz für die JD-gesteuerte Lebenslaufanalyse, die Beschränkung auf echte Erfahrungen, die Beleg-Zuordnung und die Inhaltsoptimierung.
 - [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume): Wichtige Referenz für die Web-Vorschau des Lebenslaufs, das Layout und den PDF-Export.
 
-Dieses Projekt wurde auf Basis dieser Ansätze weiterentwickelt und integriert: Der Workflow, die Templates, die Validierungslogik, die Beispiele und die Dokumentation von Easy-Job-Tutor wurden ergänzt und unter der MIT-Lizenz veröffentlicht. Bei Nutzung oder Weiterverbreitung sind sowohl die Lizenz- als auch die Namensnennungsanforderungen dieses Projekts sowie der referenzierten Upstream-Projekte zu beachten.
+Dieses Projekt wurde auf Basis dieser Ansätze weiterentwickelt und integriert: Der Workflow, die Templates, die Validierungslogik, die Beispiele und die Dokumentation von Easy-Job-Tutor wurden ergänzt und unter der Apache-Lizenz 2.0 veröffentlicht. Bei Nutzung oder Weiterverbreitung sind sowohl die Lizenz- als auch die Namensnennungsanforderungen dieses Projekts sowie der referenzierten Upstream-Projekte zu beachten.

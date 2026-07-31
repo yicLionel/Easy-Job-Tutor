@@ -2,7 +2,7 @@
 
 > **履歴書を出しても返事が来ない？自分の経験をどう書けば魅力的に見えるのか分からない？Easy-Job-Tutor は、人事のことも採用の流れもあなたのことも理解している AI 履歴書コーチ。面接官が思わず目を引く履歴書へ、一歩ずつ一緒に磨き上げてくれます。**
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
 ![Language Japanese](https://img.shields.io/badge/Language-Japanese-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
@@ -239,7 +239,7 @@ Easy-Job-Tutor/
 
 ## オープンソースライセンス
 
-本プロジェクトは [MIT License](../../LICENSE) を採用しています。著作権表示とライセンス表記を保持する限り、使用・変更・再配布が可能です。
+本プロジェクトは [Apache License 2.0](../../LICENSE) を採用しています。著作権表示を保持し、ライセンス条項に従う限り、自由に使用・変更・再配布（商用利用を含む）が可能です。
 
 ## 🙏 謝辞と参考
 
@@ -248,4 +248,4 @@ Easy-Job-Tutor の初期アイデアは、以下の優れたオープンソー�
 - [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn)：JD 駆動の履歴書分析、実経験の制約、証拠マッピング、内容最適化の重要な参考となりました。
 - [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume)：Web での履歴書プレビュー、レイアウト、PDF 書き出しフローの重要な参考となりました。
 
-本プロジェクトは、上記のアイデアを基に二次開発と統合を行い、Easy-Job-Tutor のワークフロー、テンプレート、検証ロジック、サンプル、ドキュメントを追加し、MIT ライセンスで公開しています。使用・再配布の際は、本プロジェクトおよび参照元プロジェクトそれぞれのライセンスと帰属要件を遵守してください。
+本プロジェクトは、上記のアイデアを基に二次開発と統合を行い、Easy-Job-Tutor のワークフロー、テンプレート、検証ロジック、サンプル、ドキュメントを追加し、Apache License 2.0 で公開しています。使用・再配布の際は、本プロジェクトおよび参照元プロジェクトそれぞれのライセンスと帰属要件を遵守してください。

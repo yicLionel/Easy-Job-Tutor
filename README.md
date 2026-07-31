@@ -2,7 +2,7 @@
 
 > **投了简历石沉大海？不知道自己的经历怎么写才吸引人？Easy-Job-Tutor 就像一个懂 HR、懂招聘、也懂你的 AI 简历老师，手把手帮你把简历改到让面试官眼前一亮。**
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
 ![Language 中文优先](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87%E4%BC%98%E5%85%88-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
@@ -230,7 +230,7 @@ Easy-Job-Tutor/
 
 ## 开源协议
 
-本项目采用 [MIT License](LICENSE)，可在保留版权和许可证声明的前提下使用、修改和分发。
+本项目采用 [Apache License 2.0](LICENSE)，允许自由使用、修改和分发（含商业用途），但需保留版权声明并遵循许可证条款。
 
 ## 🙏 致谢与参考
 
@@ -239,4 +239,4 @@ Easy-Job-Tutor 的初始思路参考并吸收了以下优秀开源项目：
 - [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn)：为 JD 驱动的简历分析、真实经历约束、证据映射和内容优化提供了重要参考。
 - [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume)：为 Web 简历预览、排版与 PDF 导出流程提供了重要参考。
 
-本项目在上述思路基础上进行了二次开发与整合，补充了 Easy-Job-Tutor 的工作流、模板、校验逻辑、示例与文档，并以 MIT 协议开源。使用或再分发时，请同时遵守本项目及所参考上游项目各自的许可证和署名要求。
+本项目在上述思路基础上进行了二次开发与整合，补充了 Easy-Job-Tutor 的工作流、模板、校验逻辑、示例与文档，并以 Apache License 2.0 协议开源。使用或再分发时，请同时遵守本项目及所参考上游项目各自的许可证和署名要求。

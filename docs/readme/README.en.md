@@ -2,7 +2,7 @@
 
 > **Getting no replies after sending out dozens of resumes? Don't know how to make your experiences sound impressive? Easy-Job-Tutor is like having an AI career coach who knows what recruiters look for — it walks you through every step, from analyzing job descriptions to polishing your resume until it shines.**
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![AI Skill Easy Job Tutor](https://img.shields.io/badge/AI%20Skill-Easy--Job--Tutor-7c3aed)
 ![Language English](https://img.shields.io/badge/Language-English-blue)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
@@ -237,7 +237,7 @@ Easy-Job-Tutor/
 
 ## License
 
-This project is released under the [MIT License](../../LICENSE). You may use, modify, and distribute it as long as you retain the copyright and license notices.
+This project is released under the [Apache License 2.0](../../LICENSE). You are free to use, modify, and distribute it (including for commercial purposes), provided that you retain the copyright notice and comply with the license terms.
 
 ## 🙏 Acknowledgments & References
 
@@ -246,4 +246,4 @@ Easy-Job-Tutor's initial approach draws on and absorbs the following excellent o
 - [coinluu/resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn): Key reference for JD-driven resume analysis, real-experience constraints, evidence mapping, and content optimization.
 - [LiuMengxuan04/vibe-resume](https://github.com/LiuMengxuan04/vibe-resume): Key reference for web-based resume preview, layout, and PDF export.
 
-This project is a further development and integration of these ideas, adding Easy-Job-Tutor's workflows, templates, verification logic, examples, and documentation, released under the MIT License. When using or redistributing, please comply with the licenses and attribution requirements of this project and its upstream references.
+This project is a further development and integration of these ideas, adding Easy-Job-Tutor's workflows, templates, verification logic, examples, and documentation, released under the Apache License 2.0. When using or redistributing, please comply with the licenses and attribution requirements of this project and its upstream references.
