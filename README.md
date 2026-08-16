@@ -7,7 +7,7 @@
 ![Language 中文优先](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87%E4%BC%98%E5%85%88-red)
 ![PDF Resume Builder](https://img.shields.io/badge/PDF-VibeResume--inspired-2563eb)
 
-[English](docs/readme/README.en.md) · [Français](docs/readme/README.fr.md) · [日本語](docs/readme/README.ja.md) · [Español](docs/readme/README.es.md) · [Deutsch](docs/readme/README.de.md) · [快速开始 ↓](#-快速开始) · [安装到你的 AI ↓](#-安装到你的-ai-一行命令)
+[English](docs/readme/README.en.md) · [Français](docs/readme/README.fr.md) · [日本語](docs/readme/README.ja.md) · [Español](docs/readme/README.es.md) · [Deutsch](docs/readme/README.de.md) · [快速开始 ↓](#-快速开始) · [安装到你的 AI ↓](#-安装到你的-ai一行命令)
 
 ---
 
