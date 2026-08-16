@@ -21,6 +21,16 @@ Help users turn a target role and their real background into stronger job-search
 - Only `confirmed` facts may enter the final resume（最终简历）, ATS version, or PDF Builder input.
 - A `pending_confirmation` or `model_inference` fact may appear only in diagnostics, follow-up questions, or review notes.
 
+### Evidence & Context Rules
+
+When deciding whether a resume line evidences a JD skill, apply these rules:
+
+- A **negation is never positive evidence**. "没有使用 / 不熟悉 / 不会 / 从未 / `no experience` / `never` / `not familiar`" marks the skill as `not_found`; a keyword in a negated clause must not count as covered.
+- A **skills-only keyword list is not coverage**. "Skills: Python, RAG, Agent" with no action/project context is `uncertain` and must not enter the final resume.
+- A skill is `evidenced` only when the keyword co-occurs with an **action/project context** (负责/主导/开发/搭建/实现/部署/上线/`built`/`developed`/`implemented`/`deployed`) in the same clause.
+- Evaluate evidence **within the same clause/context**; a `但是/然而` (but/however/yet) trailing clause is not covered by the preceding one.
+- For short Latin keywords (≤3 chars, e.g. `ai`, `py`), match on word boundaries so emails and URLs don't false-positive.
+
 ## Resume Optimization Gate
 
 Before making a candidate-fit claim or drafting a final resume, route the request into exactly one of these modes:
@@ -89,6 +99,8 @@ If the user does not specify a style, recommend one based on the target industry
 - Use `templates/fact-ledger-template.md` to record source, evidence, and fact status.
 - Use `templates/five-dimension-review-template.md` for JD match, ATS, HR, interview readiness, and credibility checks.
 - Use `templates/multi-jd-difference-template.md` when tailoring the same factual baseline to multiple JDs.
+- Use `templates/role-knowledge-base.md` when the target role is AI Product / AI Agent 开发 / AI 运营 (or to build any JD-driven role skill checklist). It defines the dimension taxonomy, importance weighting, and the negation/context evidence rules.
+- Use `templates/learning-path-template.md` for 查漏补缺 → 学习路线 → 面试辅导 outputs based on the gap list.
 - Use `templates/pdf-resume-template.md` before building PDF resume content.
 - Use `design/resume-design-principles.md` and `design/resume-layout-spec.md` when designing PDF layout.
 - Use `scripts/build_resume_pdf.py` to build text-based HTML and PDF output.
