@@ -208,7 +208,7 @@ Si el contenido ya está confirmado, añade la frase «genera un PDF A4 de una p
 ```
 Easy-Job-Tutor/
 ├── SKILL.md              ← El "manual de instrucciones" del asistente de IA
-├── templates/            ← Plantillas de análisis (análisis de JD, optimización de currículum, evaluación en cinco dimensiones…)
+├── templates/            ← Plantillas de análisis (análisis de JD, optimización de currículum, evaluación en cinco dimensiones, base de conocimiento de roles, ruta de aprendizaje…)
 ├── design/               ← Especificaciones de diseño para la maquetación del PDF
 ├── scripts/              ← Scripts de generación y validación del PDF
 ├── examples/             ← Datos de ejemplo

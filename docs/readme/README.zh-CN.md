@@ -208,7 +208,7 @@ AI 就会一步步帮你做完全流程：
 ```
 Easy-Job-Tutor/
 ├── SKILL.md              ← AI 助手的"操作手册"
-├── templates/            ← 各种分析模板（JD分析、简历优化、五维评审…）
+├── templates/            ← 各种分析模板（JD分析、简历优化、五维评审、岗位知识库、学习路线…）
 ├── design/               ← PDF 排版的设计规范
 ├── scripts/              ← PDF 生成和校验脚本
 ├── examples/             ← 示例数据

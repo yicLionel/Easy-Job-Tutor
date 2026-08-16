@@ -215,7 +215,7 @@ Sobald die Inhalte bestätigt sind, kannst du ergänzen: „Bitte erstelle ein e
 ```
 Easy-Job-Tutor/
 ├── SKILL.md              ← Die „Bedienungsanleitung" des KI-Assistenten
-├── templates/            ← Analysetemplates (JD-Analyse, Lebenslauf-Optimierung, Fünf-Dimensionen-Review …)
+├── templates/            ← Analysetemplates (JD-Analyse, Lebenslauf-Optimierung, Fünf-Dimensionen-Review, Rollen-Wissensbasis, Lernpfad …)
 ├── design/               ← Designvorgaben für das PDF-Layout
 ├── scripts/              ← Skripte zur PDF-Erstellung und -Validierung
 ├── examples/             ← Beispieldaten

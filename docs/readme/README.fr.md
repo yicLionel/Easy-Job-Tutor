@@ -208,7 +208,7 @@ Une fois le contenu confirmé, ajoutez « génère un PDF A4 d'une page en style
 ```
 Easy-Job-Tutor/
 ├── SKILL.md              ← le « manuel d'utilisation » de l'assistant IA
-├── templates/            ← divers modèles d'analyse (analyse JD, optimisation de CV, évaluation sur cinq dimensions…)
+├── templates/            ← divers modèles d'analyse (analyse JD, optimisation de CV, évaluation sur cinq dimensions, base de connaissances des rôles, parcours d'apprentissage…)
 ├── design/               ← les spécifications de mise en page PDF
 ├── scripts/              ← les scripts de génération et de validation PDF
 ├── examples/             ← données d'exemple

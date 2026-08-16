@@ -215,7 +215,7 @@ Once the content is confirmed, add: "Generate a one-page A4 PDF in Modern Minima
 ```
 Easy-Job-Tutor/
 ├── SKILL.md              ← The AI assistant's "operations manual"
-├── templates/            ← Analysis templates (JD analysis, resume optimization, 5-dimension review...)
+├── templates/            ← Analysis templates (JD analysis, resume optimization, 5-dimension review, role knowledge base, learning path...)
 ├── design/               ← PDF layout design specs
 ├── scripts/              ← PDF generation & verification scripts
 ├── examples/             ← Sample data
