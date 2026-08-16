@@ -66,3 +66,55 @@ test("confirmed evidence tolerates PDF unicode, spacing, and punctuation normali
     }),
   );
 });
+
+test("confirmed evidence tolerates one model wording substitution inside a long source-backed quote", async () => {
+  const sourceBackedResume = {
+    ...baseSession.resume,
+    text: "参与测评OpenClaw、MaxClaw、Codex等10+款AI Agent产品，比较任务执行、GUI控制与自动化能力，梳理Agent工作机制。",
+  };
+  const payload = diagnosisFor(resume, job);
+  payload.facts = [{
+    factId: "f1",
+    statement: "参与多款 AI Agent 产品评测",
+    status: "confirmed",
+    source: "resume",
+    evidence: "参与测评OpenClaw、MaxClaw、Codex等10+款AI Agent产品，对比任务执行、GUI控制与自动化能力",
+  }];
+
+  await assert.doesNotReject(
+    diagnoseConfirmedMaterials({
+      llmClient: { diagnose: async () => payload },
+      settings: {},
+      session: { ...baseSession, resume: sourceBackedResume },
+    }),
+  );
+});
+
+test("unsupported confirmed evidence is downgraded instead of failing the whole diagnosis", async () => {
+  const payload = diagnosisFor(resume, job);
+  payload.facts = [{
+    factId: "f1",
+    statement: "主导 Java 微服务平台上线",
+    status: "confirmed",
+    source: "resume",
+    evidence: "主导Java微服务平台上线并将系统吞吐量提升300%",
+  }];
+
+  payload.evidence[0] = {
+    ...payload.evidence[0],
+    factId: "f1",
+    strength: "strong",
+  };
+
+  const result = await diagnoseConfirmedMaterials({
+    llmClient: { diagnose: async () => payload },
+    settings: {},
+    session: baseSession,
+  });
+
+  assert.equal(result.payload.facts[0].status, "pending_confirmation");
+  assert.equal(result.payload.evidence[0].strength, "pending");
+  assert.match(result.payload.evidence[0].reason, /无法在已确认原文中定位/);
+  assert.ok(result.payload.questions.some((question) => question.factId === "f1"));
+  assert.ok(result.scoring.unscorableRequirements.includes(result.payload.evidence[0].requirementId));
+});
